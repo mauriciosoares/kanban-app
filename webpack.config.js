@@ -31,6 +31,9 @@ var common = {
 
 if(TARGET === 'start' || !TARGET) {
   module.exports = merge(common, {
+    // PROTIP eval-source-map produces a
+    // better quality sourcemap, but "eval"
+    // is faster and more suitable for large size projects.
     devtool: 'eval-source-map',
     devServer: {
       historyApiFallback: true,
