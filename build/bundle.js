@@ -49,7 +49,7 @@
 
 	app.appendChild(component());
 
-	document.bod.appendChild(app);
+	document.body.appendChild(app);
 
 
 /***/ },
