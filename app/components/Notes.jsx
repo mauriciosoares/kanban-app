@@ -3,9 +3,11 @@ import Note from './Note.jsx';
 
 class Notes extends React.Component {
   render() {
+    const notes = this.props.items;
+
     return (
       <ul>
-        { this.props.items.map(this.renderNote) }
+        { notes.map(this.renderNote) }
       </ul>
     )
   }
