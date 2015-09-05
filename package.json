@@ -1,0 +1,22 @@
+{
+  "name": "kanban-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauriciosoares/kanban-app.git"
+  },
+  "keywords": [
+    "kanban"
+  ],
+  "author": "Mauricio Soares",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauriciosoares/kanban-app/issues"
+  },
+  "homepage": "https://github.com/mauriciosoares/kanban-app"
+}
