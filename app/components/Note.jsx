@@ -19,7 +19,7 @@ class Note extends React.Component {
     const editing = this.state.editing;
 
     return (
-      <div>
+      <div className="note">
         {editing ? this.renderEdit() : this.renderTask()}
       </div>
     )

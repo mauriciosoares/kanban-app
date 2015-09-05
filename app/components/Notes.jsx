@@ -12,7 +12,7 @@ class Notes extends React.Component {
     const notes = this.props.items;
 
     return (
-      <ul>
+      <ul className="notes">
         { notes.map(this.renderNote) }
       </ul>
     )
