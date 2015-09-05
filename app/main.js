@@ -6,3 +6,5 @@ var app = document.createElement('div');
 app.appendChild(component());
 
 document.body.appendChild(app);
+
+console.log('teste');
