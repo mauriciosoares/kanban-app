@@ -28,6 +28,7 @@ class App extends React.Component {
     this.findNote = this.findNote.bind(this);
     this.addNote = this.addNote.bind(this);
     this.editNote = this.editNote.bind(this);
+    this.deleteNote = this.deleteNote.bind(this);
   }
 
   render() {
@@ -37,7 +38,8 @@ class App extends React.Component {
         <button onClick={this.addNote} />
         <Notes
           items={notes}
-          onEdit={this.editNote} />
+          onEdit={this.editNote}
+          onDelete={this.deleteNote} />
       </div>
     );
   }
@@ -61,6 +63,19 @@ class App extends React.Component {
     notes[noteIndex].task = task;
 
     this.setState({ notes });
+  }
+
+  deleteNote(id) {
+    const notes = this.state.notes;
+    const noteIndex = this.findNote(id);
+
+    if(noteIndex < 0) return;
+
+    this.setState({
+      notes: notes
+        .slice(0, noteIndex)
+        .concat(notes.slice(noteIndex + 1))
+    });
   }
 
   findNote(id) {
