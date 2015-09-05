@@ -9,7 +9,6 @@ class App extends React.Component {
     super(props);
 
     this.storeChanged = this.storeChanged.bind(this);
-    console.log(NoteStore.getState());
     this.state = NoteStore.getState();
   }
 
