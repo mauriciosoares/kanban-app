@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/mauriciosoares/kanban-app/issues"
   },
-  "homepage": "https://github.com/mauriciosoares/kanban-app"
+  "homepage": "https://github.com/mauriciosoares/kanban-app",
+  "devDependencies": {
+    "html-webpack-plugin": "^1.6.1",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.12.1"
+  }
 }
