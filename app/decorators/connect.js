@@ -17,7 +17,6 @@ const connect = (Component, store) => {
       this.setState(store.getState());
     }
     render() {
-      console.log({...this.state});
       return <Component {...this.props} {...this.state} />;
     }
   };
