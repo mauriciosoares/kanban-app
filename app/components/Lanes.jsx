@@ -7,7 +7,7 @@ class Lanes extends React.Component {
 
     return (
       <div className="lanes">
-        { lanes.map(this.rendeLane) }
+        { lanes.map(this.renderLane) }
       </div>
     );
   }
