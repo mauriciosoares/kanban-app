@@ -17,7 +17,6 @@ class Lane extends React.Component {
 
   render() {
     const {id, name, notes, ...props} = this.props;
-    console.log(notes);
 
     return(
       <div {...props}>

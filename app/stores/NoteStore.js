@@ -14,7 +14,6 @@ class NoteStore {
   }
 
   get(ids) {
-    console.log(ids);
     return (ids || []).map(id => this.notes[this.findNote(id)]);
   }
 

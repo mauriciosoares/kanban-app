@@ -1,5 +1,5 @@
 import React from 'react';
-import Note from './Note.jsx';
+import Editable from './Editable.jsx';
 
 class Notes extends React.Component {
   constructor(props) {
@@ -20,9 +20,9 @@ class Notes extends React.Component {
 
   renderNote(note) {
     return (
-      <li key={note.id}>
-        <Note
-          task={note.task}
+      <li className='note' key={`note${note.id}`}>
+        <Editable
+          value={note.task}
           onEdit={this.props.onEdit.bind(null, note.id)}
           onDelete={this.props.onDelete.bind(null, note.id)} />
       </li>
