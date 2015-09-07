@@ -7,6 +7,15 @@ class NoteStore {
     this.bindActions(NoteActions);
 
     this.notes = [];
+
+    this.exportPublicMethods({
+      get: this.get.bind(this)
+    });
+  }
+
+  get(ids) {
+    console.log(ids);
+    return (ids || []).map(id => this.notes[this.findNote(id)]);
   }
 
   create(note) {
@@ -45,7 +54,9 @@ class NoteStore {
     const notes = this.notes;
     const noteIndex = notes.findIndex(note => note.id === id);
 
-    if(noteIndex < 0) console.warn('Failed to find note', notes, id);
+    if(noteIndex < 0){
+        console.warn('Failed to find note', notes, id);
+      }
 
     return noteIndex;
   }
