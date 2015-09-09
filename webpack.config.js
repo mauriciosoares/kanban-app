@@ -39,7 +39,8 @@ if(TARGET === 'start' || !TARGET) {
       historyApiFallback: true,
       hot: true,
       inline: true,
-      progress: true
+      progress: true,
+      port: 1234
     },
 
     module: {
