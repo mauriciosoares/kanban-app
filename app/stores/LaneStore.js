@@ -96,6 +96,12 @@ class LaneStore {
       lanes: lanes.slice(0, targetId).concat(lanes.slice(targetId + 1))
     });
   }
+
+  move({ sourceNote, targetNote }) {
+    console.log('source', sourceNote);
+    console.log('target', targetNote);
+    console.log('--------------------');
+  }
 }
 
 export default alt.createStore(LaneStore, 'LaneStore');

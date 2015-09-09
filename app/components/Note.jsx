@@ -4,17 +4,21 @@ import ItemTypes from '../libs/item_types';
 
 const noteSource = {
   beginDrag(props) {
-    console.log('begin dragging note', props);
-
-    return {};
+    return {
+      data: props.data
+    };
   }
 };
 
 const noteTarget = {
   hover(targetProps, monitor) {
+    const targetNote = targetProps.data || {};
     const sourceProps = monitor.getItem();
+    const sourceNote = sourceProps.data || {};
 
-    console.log('dragging note', sourceProps, targetProps);
+    if(sourceNote.id !== targetNote.id) {
+      targetProps.onMove({ sourceNote, targetNote });
+    }
   }
 }
 
@@ -33,10 +37,6 @@ class Note extends React.Component {
       data,
       ...props
     } = this.props;
-
-    console.log(props);
-
-    console.log(this.props);
 
     return connectDragSource(connectDropTarget(
       <li {...this.props}>{props.children}</li>
